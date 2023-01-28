@@ -1,5 +1,16 @@
 # Requirement Specifications
 
+## Working principle
+
+```mermaid
+flowchart TD
+C[mtgjson]-->B[internal database of card names and all possible sets]
+A[Cardtrader API]--Provide amounts of owned cards-->B
+B--Thresholds for min. needed set's cards-->D[Booster Tutor]
+D--Compare to-->B
+B--Output-->E[Ready made boosters]
+```
+
 ## Modules
 
 ### Cardtrader API-service
