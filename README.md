@@ -12,3 +12,5 @@ B--Thresholds for min. needed set's cards-->D[Booster Tutor]
 D--Compare to-->B
 B--Output-->E[Ready made boosters]
 ```
+
+[Development Plan](/documentation/changelog.md)
