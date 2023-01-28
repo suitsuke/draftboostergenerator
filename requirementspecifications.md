@@ -6,7 +6,8 @@
 flowchart TD
 C[mtgjson]-->B[internal database of card names and all possible sets]
 A[Cardtrader API]--Provide amounts of owned cards-->B
-B--Thresholds for min. needed set's cards-->D[Booster Tutor]
+B--Cards-->F[Algorithm for thresholds for min. needed set's cards]
+F--Sets-->D[Booster Tutor]
 D--Compare to-->B
 B--Output-->E[Ready made boosters]
 ```
@@ -30,7 +31,7 @@ B--Output-->E[Ready made boosters]
 - when the algorithm has decided which sets you should try to generate boosters for, send the list of sets to booster tutor
 - booster tutor generates some random boosters until it is ok for pack collation (step 1)
 - boosters from step 1 are compared to database of owned/available cards (step 2)
-- if there's enough, output a booster and remove it from the available cards (step 3)
+- if there's enough, output a booster and remove the cards in it from the available cards (step 3)
 
 ### output module
 - can be just terminal text format for starters
